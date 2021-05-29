@@ -7,22 +7,22 @@ const RESOURCES = {
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "assets/lib/app/assets/background.jpg": "e1d166fbe8de6aa9f472bfd454a733a5",
-"assets/lib/app/assets/devto.png": "fb6d95dc4911d9fc276711d04fae28d1",
+"assets/lib/app/assets/devto.png": "f8c96a539de66cc1dc9bbce7dd1499ca",
 "assets/lib/app/assets/favicon.png": "1c3ad3876a5d5dbec4d91baa9563b671",
-"assets/lib/app/assets/github.png": "8014fb4e688c3e01906c1a1ac1a7e6b8",
-"assets/lib/app/assets/googledev.png": "30068d0f39ebac21db29cbf93c43382d",
-"assets/lib/app/assets/linkedin.png": "bf1b09c457fed2af2547f370b82fd822",
+"assets/lib/app/assets/github.png": "90fe0978c2a238366142fc7da902bb2b",
+"assets/lib/app/assets/googledev.png": "4a0ef7e47cf61d121601ff3fffd50fd8",
+"assets/lib/app/assets/linkedin.png": "dd15c08912a7e09283b3a9ea0b6d99a8",
 "assets/lib/app/assets/me.jpg": "a9acf55f06d6cf4185b54d0a8cf3739d",
-"assets/NOTICES": "a343d01e8cc8e460d0526fb92f70b5f9",
+"assets/NOTICES": "f565b14812c0209c9fd64caf9be2141b",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "favicon.png": "1c3ad3876a5d5dbec4d91baa9563b671",
 "icons/icon-192.png": "e1a940c6c3e6f1ccdce95a785053c200",
 "icons/icon-512.png": "9a682713737975729298ca17e132b624",
-"index.html": "1f51447f96623b3aa4d75ac738fef78b",
-"/": "1f51447f96623b3aa4d75ac738fef78b",
-"main.dart.js": "f3e355ada807046211e7f3646902d20d",
+"index.html": "96498c8864c524b2762ad6a01f476520",
+"/": "96498c8864c524b2762ad6a01f476520",
+"main.dart.js": "b753729a3e217fd8bcca4b9912880286",
 "manifest.json": "06bd469fa32a51a15169cb928ee54b7a",
-"version.json": "dbf25641a5eba1aea26512c21b524eb9"
+"version.json": "ef3449dffc6309079caac394aea7112e"
 };
 
 // The application shell files that are downloaded before a service worker can
