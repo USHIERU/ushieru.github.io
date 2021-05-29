@@ -6,7 +6,7 @@ import 'package:ushieru/app/utils/size_config.dart';
 import 'package:ushieru/app/widgets/icon_contact.dart';
 
 class IndexScreen extends StatelessWidget {
-  static final routeName = "IndexScreen";
+  static final routeName = "index";
 
   @override
   Widget build(BuildContext context) {
@@ -14,36 +14,42 @@ class IndexScreen extends StatelessWidget {
     return SimpleLayout(
       child: LayoutBuilder(
         builder: (context, constraints) {
-          var imageSize = SizeConfig.blockSizeHorizontal(50);
-          var imUshieru = SizeConfig.blockSizeHorizontal(12);
-          var softwareEngineering = SizeConfig.blockSizeHorizontal(5);
-          var likeIronMan = SizeConfig.blockSizeHorizontal(1.5);
-          var iconsSize = SizeConfig.blockSizeHorizontal(15);
+          var indexesScreenSizes = IndexScreenSizes(
+            SizeConfig.blockSizeHorizontal(50),
+            SizeConfig.blockSizeHorizontal(12),
+            SizeConfig.blockSizeHorizontal(5),
+            SizeConfig.blockSizeHorizontal(1.5),
+            SizeConfig.blockSizeHorizontal(15),
+          );
 
           if (constraints.maxWidth >= BreakPoints.xxlarge) {
-            imageSize = SizeConfig.blockSizeHorizontal(10);
-            imUshieru = SizeConfig.blockSizeHorizontal(6);
-            softwareEngineering = SizeConfig.blockSizeHorizontal(2.5);
-            likeIronMan = SizeConfig.blockSizeHorizontal(.5);
-            iconsSize = SizeConfig.blockSizeHorizontal(4);
+            indexesScreenSizes
+              ..imageSize = SizeConfig.blockSizeHorizontal(10)
+              ..imUshieru = SizeConfig.blockSizeHorizontal(6)
+              ..softwareEngineering = SizeConfig.blockSizeHorizontal(2.5)
+              ..likeIronMan = SizeConfig.blockSizeHorizontal(.5)
+              ..iconsSize = SizeConfig.blockSizeHorizontal(4);
           } else if (constraints.maxWidth >= BreakPoints.xlarge) {
-            imageSize = SizeConfig.blockSizeHorizontal(14);
-            imUshieru = SizeConfig.blockSizeHorizontal(8);
-            softwareEngineering = SizeConfig.blockSizeHorizontal(3);
-            likeIronMan = SizeConfig.blockSizeHorizontal(.75);
-            iconsSize = SizeConfig.blockSizeHorizontal(5);
+            indexesScreenSizes
+              ..imageSize = SizeConfig.blockSizeHorizontal(14)
+              ..imUshieru = SizeConfig.blockSizeHorizontal(8)
+              ..softwareEngineering = SizeConfig.blockSizeHorizontal(3)
+              ..likeIronMan = SizeConfig.blockSizeHorizontal(.75)
+              ..iconsSize = SizeConfig.blockSizeHorizontal(5);
           } else if (constraints.maxWidth >= BreakPoints.large) {
-            imageSize = SizeConfig.blockSizeHorizontal(26);
-            imUshieru = SizeConfig.blockSizeHorizontal(10);
-            softwareEngineering = SizeConfig.blockSizeHorizontal(3.5);
-            likeIronMan = SizeConfig.blockSizeHorizontal(1);
-            iconsSize = SizeConfig.blockSizeHorizontal(7);
+            indexesScreenSizes
+              ..imageSize = SizeConfig.blockSizeHorizontal(26)
+              ..imUshieru = SizeConfig.blockSizeHorizontal(10)
+              ..softwareEngineering = SizeConfig.blockSizeHorizontal(3.5)
+              ..likeIronMan = SizeConfig.blockSizeHorizontal(1)
+              ..iconsSize = SizeConfig.blockSizeHorizontal(7);
           } else if (constraints.maxWidth >= BreakPoints.medium) {
-            imageSize = SizeConfig.blockSizeHorizontal(38);
-            imUshieru = SizeConfig.blockSizeHorizontal(11);
-            softwareEngineering = SizeConfig.blockSizeHorizontal(4.5);
-            likeIronMan = SizeConfig.blockSizeHorizontal(1.25);
-            iconsSize = SizeConfig.blockSizeHorizontal(10);
+            indexesScreenSizes
+              ..imageSize = SizeConfig.blockSizeHorizontal(38)
+              ..imUshieru = SizeConfig.blockSizeHorizontal(11)
+              ..softwareEngineering = SizeConfig.blockSizeHorizontal(4.5)
+              ..likeIronMan = SizeConfig.blockSizeHorizontal(1.25)
+              ..iconsSize = SizeConfig.blockSizeHorizontal(10);
           }
 
           return SingleChildScrollView(
@@ -51,7 +57,7 @@ class IndexScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: imageSize,
+                  width: indexesScreenSizes.imageSize,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(500),
                     child: Image.asset(
@@ -70,7 +76,7 @@ class IndexScreen extends StatelessWidget {
                   style: TextStyle(
                     color: MyColors.white,
                     fontWeight: FontWeight.w600,
-                    fontSize: imUshieru,
+                    fontSize: indexesScreenSizes.imUshieru,
                   ),
                 ),
                 Text(
@@ -78,7 +84,7 @@ class IndexScreen extends StatelessWidget {
                   style: TextStyle(
                     color: MyColors.white,
                     fontWeight: FontWeight.w600,
-                    fontSize: softwareEngineering,
+                    fontSize: indexesScreenSizes.softwareEngineering,
                   ),
                 ),
                 SizedBox(height: SizeConfig.blockSizeVertical(1)),
@@ -86,7 +92,7 @@ class IndexScreen extends StatelessWidget {
                   '(Like Iron Man but... cooler)',
                   style: TextStyle(
                     color: MyColors.white,
-                    fontSize: likeIronMan,
+                    fontSize: indexesScreenSizes.likeIronMan,
                   ),
                 ),
                 SizedBox(height: SizeConfig.blockSizeVertical(3)),
@@ -97,20 +103,25 @@ class IndexScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconContact(
-                        uri: 'lib/app/assets/github.png',
-                        size: iconsSize,
+                        uriImage: 'lib/app/assets/github.png',
+                        url: 'https://github.com/ushieru',
+                        size: indexesScreenSizes.iconsSize,
                       ),
                       IconContact(
-                        uri: 'lib/app/assets/devto.png',
-                        size: iconsSize,
+                        uriImage: 'lib/app/assets/devto.png',
+                        url: 'https://dev.to/ushieru',
+                        size: indexesScreenSizes.iconsSize,
                       ),
                       IconContact(
-                        uri: 'lib/app/assets/googledev.png',
-                        size: iconsSize,
+                        uriImage: 'lib/app/assets/googledev.png',
+                        url:
+                            'https://developers.google.com/profile/u/110578328349513222610',
+                        size: indexesScreenSizes.iconsSize,
                       ),
                       IconContact(
-                        uri: 'lib/app/assets/linkedin.png',
-                        size: iconsSize,
+                        uriImage: 'lib/app/assets/linkedin.png',
+                        url: 'https://www.linkedin.com/in/uzielcocolan/',
+                        size: indexesScreenSizes.iconsSize,
                       ),
                     ],
                   ),
@@ -122,4 +133,15 @@ class IndexScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class IndexScreenSizes {
+  double imageSize;
+  double imUshieru;
+  double softwareEngineering;
+  double likeIronMan;
+  double iconsSize;
+
+  IndexScreenSizes(this.imageSize, this.imUshieru, this.softwareEngineering,
+      this.likeIronMan, this.iconsSize);
 }
